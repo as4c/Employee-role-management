@@ -26,12 +26,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 // Routes
-app.get("/", (req, res) => {
-    const html = `
-    <h3> Employee-role management api </h3>
-    `
-    res.send(html);
-})
+
 app.use("/api/roles", roleRouter); // roles related routes
 app.use("/api/employees", empRouter); // employee related router
 app.use("/api", authRouter); // api general routers
