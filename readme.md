@@ -1,5 +1,4 @@
 # Employee-role management
-
 ### API Documentation
 
 This documentation provides details on the endpoints available in the system.
@@ -96,6 +95,47 @@ This documentation provides details on the endpoints available in the system.
    - **Description**: Authenticates a user and returns a token for accessing secured endpoints.
    - **Request Body**: JSON object containing user credentials (e.g., username, password).
    - **Response**: Returns a JSON object containing an authentication token.
+
+---
+
+### Technology Stack
+
+- **Node.js**: A JavaScript runtime environment for executing server-side code.
+- **Express.js**: A minimalist web framework for Node.js, used for building APIs and web applications.
+- **Database**: MongoDB, a NoSQL database, is used for storing data in a document-oriented format.
+
+### Cloning Instructions
+
+To clone this repository and run the API locally, follow these steps:
+
+1. Ensure you have Node.js installed on your machine. You can download it from [here](https://nodejs.org/).
+2. Install MongoDB on your machine. You can find installation instructions [here](https://docs.mongodb.com/manual/installation/).
+3. Clone the repository to your local machine using the following command:
+
+   ```
+   git clone <repository-url>
+   ```
+
+4. Navigate to the project directory:
+
+   ```
+   cd <project-directory>
+   ```
+
+5. Install the dependencies using npm:
+
+   ```
+   npm install
+   ```
+
+6. Start the MongoDB service on your machine.
+7. Start the Node.js server:
+
+   ```
+   npm start
+   ```
+
+8. The API should now be running locally on your machine, and you can access the endpoints as described in the documentation.
 
 ---
 
