@@ -1,0 +1,1334 @@
+{
+	"info": {
+		"_postman_id": "901510a0-c604-4845-ac55-6eaa35db1e0a",
+		"name": "Employee-Role",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27723928"
+	},
+	"item": [
+		{
+			"name": "create-role",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"role_name\" : \"SDE1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/roles/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"roles",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "blank body",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role_name\" : \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/roles/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roles",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-pRpuuUGdqawsSKOQzDN51PGz9Wk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 05:02:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"role name is required\"\n}"
+				},
+				{
+					"name": "empty body",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role_name\" : \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/roles/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roles",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"23-pRpuuUGdqawsSKOQzDN51PGz9Wk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 05:03:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"role name is required\"\n}"
+				},
+				{
+					"name": "valid body",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role_name\" : \"Asst. Manager\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/roles/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roles",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "59"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3b-Tic/MOra6t82n0xWCkiU84w6obg\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 05:05:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6621fbb5902dc2c58f9c2056\",\n    \"message\": \"Role created!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get-all-roles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/roles/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"roles",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get-all-roles",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/roles/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roles",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "433"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b1-I4fzSHdEsj9fuy7kkZG4mx/7p7o\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 05:13:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6621fb817334ac7232720c60\",\n        \"role_name\": \"Manager\",\n        \"createdAt\": \"2024-04-19T05:05:05.873Z\",\n        \"updatedAt\": \"2024-04-19T05:05:05.873Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6621fbb5902dc2c58f9c2056\",\n        \"role_name\": \"Asst. Manager\",\n        \"createdAt\": \"2024-04-19T05:05:57.555Z\",\n        \"updatedAt\": \"2024-04-19T05:05:57.555Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6621fcc24d4e1176a5aa063f\",\n        \"role_name\": \"SDE1\",\n        \"createdAt\": \"2024-04-19T05:10:26.996Z\",\n        \"updatedAt\": \"2024-04-19T05:10:26.996Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get-role-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/roles/6621fbb5902dc2c58f9c2056",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"roles",
+						"6621fbb5902dc2c58f9c2056"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "role-by-id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/roles/6621fbb5902dc2c58f9c2056",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roles",
+								"6621fbb5902dc2c58f9c2056"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "148"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"94-mpkFEiRAh87MxM4/2AipC+MJekk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 05:18:19 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6621fbb5902dc2c58f9c2056\",\n    \"role_name\": \"Asst. Manager\",\n    \"createdAt\": \"2024-04-19T05:05:57.555Z\",\n    \"updatedAt\": \"2024-04-19T05:05:57.555Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "update-role",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"role_name\" : \"Assistant Manager\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/roles/6621fbb5902dc2c58f9c2056",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"roles",
+						"6621fbb5902dc2c58f9c2056"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "role updated",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"role_name\" : \"Assistant Manager\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/roles/6621fbb5902dc2c58f9c2056",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roles",
+								"6621fbb5902dc2c58f9c2056"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-GUJVGtQGxstkk0v4jgW7qfjp5cQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 05:27:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Role Updated!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete role",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/roles/6621fcc24d4e1176a5aa063f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"roles",
+						"6621fcc24d4e1176a5aa063f"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete-role",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/roles/6621fcc24d4e1176a5aa063f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"roles",
+								"6621fcc24d4e1176a5aa063f"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b-T7B6X2bOmw3Bc2IXNAdt+UH9WYQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 05:32:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Role Deleted!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "create-employees",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rid\" : \"6621fb817334ac7232720c60\",\n    \"name\" : \"test user1\",\n    \"empcode\" : \"3se241\",\n    \"mail_id\" : \"testuser1@gmail.com\",\n    \"phone_number\" : \"1234567890\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/employees/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create-employee",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rid\" : \"6621fb817334ac7232720c60\",\n    \"name\" : \"test user1\",\n    \"empcode\" : \"3se241\",\n    \"mail_id\" : \"testuser1@gmail.com\",\n    \"phone_number\" : \"1234567890\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/employees/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3f-Q0td4p3RCoz4xylisD7PIrpcrCY\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 06:38:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6622116cf5ef395145cc4905\",\n    \"message\": \"Employee created!\"\n}"
+				},
+				{
+					"name": "create-employees",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rid\" : \"6621fb817334ac7232720c60\",\n    \"name\" : \"test user2\",\n    \"empcode\" : \"3se242\",\n    \"mail_id\" : \"testuser1@gmail.com\",\n    \"phone_number\" : \"1234567890\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/employees/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "get-all-emloyees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employees/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get-all-employees",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employees/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "508"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1fc-YtTw+NWFErFqX8s6Od/8gIFf5sc\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 07:00:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6622116cf5ef395145cc4905\",\n        \"rid\": \"6621fb817334ac7232720c60\",\n        \"name\": \"test user1\",\n        \"empcode\": \"3se241\",\n        \"mail_id\": \"testuser1@gmail.com\",\n        \"phone_number\": \"1234567890\",\n        \"createdAt\": \"2024-04-19T06:38:36.947Z\",\n        \"updatedAt\": \"2024-04-19T06:38:36.947Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6622150e2abe3129e300401c\",\n        \"rid\": \"6621fb817334ac7232720c60\",\n        \"name\": \"test user2\",\n        \"empcode\": \"3se2412\",\n        \"mail_id\": \"testuser2@gmail.com\",\n        \"phone_number\": \"1234567891\",\n        \"createdAt\": \"2024-04-19T06:54:06.370Z\",\n        \"updatedAt\": \"2024-04-19T06:54:06.370Z\",\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "get-all",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employees/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "761"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2f9-KKYVGpMtug7V+aVJqeoFCBDDIhs\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 07:02:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"6622116cf5ef395145cc4905\",\n        \"rid\": \"6621fb817334ac7232720c60\",\n        \"name\": \"test user1\",\n        \"empcode\": \"3se241\",\n        \"mail_id\": \"testuser1@gmail.com\",\n        \"phone_number\": \"1234567890\",\n        \"createdAt\": \"2024-04-19T06:38:36.947Z\",\n        \"updatedAt\": \"2024-04-19T06:38:36.947Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6622150e2abe3129e300401c\",\n        \"rid\": \"6621fb817334ac7232720c60\",\n        \"name\": \"test user2\",\n        \"empcode\": \"3se2412\",\n        \"mail_id\": \"testuser2@gmail.com\",\n        \"phone_number\": \"1234567891\",\n        \"createdAt\": \"2024-04-19T06:54:06.370Z\",\n        \"updatedAt\": \"2024-04-19T06:54:06.370Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"662216eb1d3d6bfa1c0f5ffe\",\n        \"rid\": \"6621fb817334ac7232720c60\",\n        \"name\": \"test user3\",\n        \"empcode\": \"3se243\",\n        \"mail_id\": \"testuser3@gmail.com\",\n        \"phone_number\": \"1234567892\",\n        \"createdAt\": \"2024-04-19T07:02:03.188Z\",\n        \"updatedAt\": \"2024-04-19T07:02:03.188Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get-employee-by-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employees/6622116cf5ef395145cc4905",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						"6622116cf5ef395145cc4905"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get-employee",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employees/6622116cf5ef395145cc4905",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								"6622116cf5ef395145cc4905"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "252"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fc-jIyRpV9JunWyy09gQWYsHLFnkqI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 07:01:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"6622116cf5ef395145cc4905\",\n    \"rid\": \"6621fb817334ac7232720c60\",\n    \"name\": \"test user1\",\n    \"empcode\": \"3se241\",\n    \"mail_id\": \"testuser1@gmail.com\",\n    \"phone_number\": \"1234567890\",\n    \"createdAt\": \"2024-04-19T06:38:36.947Z\",\n    \"updatedAt\": \"2024-04-19T06:38:36.947Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "update employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rid\" : \"6621fbb5902dc2c58f9c2056\",\n    \"phone_number\" : \"9876543210\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/employees/6622116cf5ef395145cc4905",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						"6622116cf5ef395145cc4905"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update-employee",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rid\" : \"6621fbb5902dc2c58f9c2056\",\n    \"phone_number\" : \"9876543210\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/employees/6622116cf5ef395145cc4905",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								"6622116cf5ef395145cc4905"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3f-G2kr0vwy53tg0A97dZLpDfrO+jo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 07:10:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6622116cf5ef395145cc4905\",\n    \"message\": \"Employee Updated!\"\n}"
+				},
+				{
+					"name": "update employee",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rid\" : \"662232ce1695faa96c9a55ef\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/employees/6622116cf5ef395145cc4905",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								"6622116cf5ef395145cc4905"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3f-G2kr0vwy53tg0A97dZLpDfrO+jo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 09:06:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"6622116cf5ef395145cc4905\",\n    \"message\": \"Employee Updated!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "delete-employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employees/662216eb1d3d6bfa1c0f5ffe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees",
+						"662216eb1d3d6bfa1c0f5ffe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "emloyee-deleted",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employees/662216eb1d3d6bfa1c0f5ffe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employees",
+								"662216eb1d3d6bfa1c0f5ffe"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f-EYj04FOdplYZLEujt3uDTz6P/0g\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 07:12:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Employee Deleted!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "employee-roles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/employee-role/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employee-role",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "employee-roles",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/employee-role/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"employee-role",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6b-td5WI/oIP2ZUJN2z8CyNvQGQw6U\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 07:46:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"emp_name\": \"test user1\",\n        \"role_name\": \"Assistant Manager\"\n    },\n    {\n        \"emp_name\": \"test user2\",\n        \"role_name\": \"Manager\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "user-login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mail_id\": \"testuser1@gmail.com\",\n    \"empcode\": \"3se241\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mail_id\": \"testuser1@gmail.com\",\n    \"empcode\": \"3se241\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "264"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"108-LxDYjMCaRsKbKKcLaxcL7N4GPGo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 19 Apr 2024 08:22:32 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjIyMTE2Y2Y1ZWYzOTUxNDVjYzQ5MDUiLCJtYWlsX2lkIjoidGVzdHVzZXIxQGdtYWlsLmNvbSIsInBob25lX251bWJlciI6Ijk4NzY1NDMyMTAiLCJpYXQiOjE3MTM1MTQ5NTIsImV4cCI6MTcxMzUxODU1Mn0.6fDrc19sJEhJFfrjY0CIyKjFdbogc_vVK3uCC-Xvmx8\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/login/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mail_id\": \"testuser4@gmail.com\",\n    \"empcode\": \"3se245\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
